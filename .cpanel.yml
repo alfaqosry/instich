@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/insticho/instich.org/
+    - /bin/cp -R * $DEPLOYPATH
