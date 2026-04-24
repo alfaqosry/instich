@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../lib/prisma.ts"],"sourcesContent":["import { PrismaClient } from '@prisma/client';\r\n\r\nconst prisma = new PrismaClient();\r\n\r\nexport { prisma };"],"names":["prisma"],"mappings":"+wCAEA,IAAMA,EAAS,GAFf,AAEmB,CAFnB,EAAA,CAAA,CAAA,MAAA,EAEmB,YAAY"}

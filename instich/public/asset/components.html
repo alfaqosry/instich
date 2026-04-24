@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPI — UI Components</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+<div class="dashboard-layout">
+
+  <!-- ╔══════════════════════════════╗
+       ║          SIDEBAR            ║
+       ╚══════════════════════════════╝ -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="sidebar-brand-logo">T</div>
+      <div>
+        <div class="sidebar-brand-name">TPI Panel</div>
+        <div class="sidebar-brand-sub">Admin Console</div>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <div class="sidebar-nav-label">Menu</div>
+      <a href="dashboard.html" class="sidebar-link">
+        <i class="fas fa-gauge"></i> Dashboard
+      </a>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-file-invoice"></i> Submissions
+      </a>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-book"></i> My Journals
+      </a>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-users"></i> Reviewers
+      </a>
+
+      <div class="sidebar-nav-label" style="margin-top:8px;">Referensi</div>
+      <a href="components.html" class="sidebar-link active">
+        <i class="fas fa-puzzle-piece"></i> UI Components
+      </a>
+      <a href="#" class="sidebar-link">
+        <i class="fas fa-gear"></i> Settings
+      </a>
+    </nav>
+
+    <div class="sidebar-footer">
+      <a href="index.html" class="sidebar-back">
+        <i class="fas fa-arrow-left"></i> Kembali ke Situs
+      </a>
+    </div>
+  </aside>
+
+  <!-- ╔══════════════════════════════╗
+       ║         CONTENT             ║
+       ╚══════════════════════════════╝ -->
+  <div class="content-area">
+
+    <!-- Topbar -->
+    <div class="content-topbar">
+      <div>
+        <div class="page-title">UI Components</div>
+        <div class="page-sub">Referensi lengkap komponen — Badge, Button, Card, Form, Profile</div>
+      </div>
+      <div class="topbar-actions">
+        <div class="topbar-notif" data-tip="Notifikasi">
+          <i class="far fa-bell"></i>
+        </div>
+        <img src="https://ui-avatars.com/api/?name=Admin+TPI&background=1d4ed8&color=ffffff&size=72"
+             class="topbar-avatar" alt="Admin">
+      </div>
+    </div>
+
+    <div class="content-inner">
+
+      <!-- ══════════════════════════════════════
+           1. BADGES
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="badges">
+        <div class="comp-section-title">01 — KOMPONEN</div>
+        <div class="comp-section-heading">Badges &amp; Labels</div>
+        <div class="comp-section-sub">Status indikator, tag, dan label untuk berbagai kondisi konten.</div>
+        <div class="comp-divider"></div>
+
+        <!-- Color variants -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Color Variants</div>
+              <div class="card-subtitle">Badge dengan warna semantik</div>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap gap-8">
+              <span class="badge badge-blue">In Review</span>
+              <span class="badge badge-green">Published</span>
+              <span class="badge badge-amber">Pending</span>
+              <span class="badge badge-red">Rejected</span>
+              <span class="badge badge-sky">Submitted</span>
+              <span class="badge badge-violet">Featured</span>
+              <span class="badge badge-outline">Default</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div class="card-title">Sizes</div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap items-center gap-12">
+              <span class="badge badge-blue badge-sm">Small</span>
+              <span class="badge badge-blue">Default</span>
+              <span class="badge badge-blue badge-lg">Large</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dot badges -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Dot Badges</div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap gap-8">
+              <span class="badge badge-green badge-dot">Online</span>
+              <span class="badge badge-amber badge-dot">Away</span>
+              <span class="badge badge-red badge-dot">Offline</span>
+              <span class="badge badge-sky badge-dot">Sedang Review</span>
+              <span class="badge badge-violet badge-dot">Featured</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           2. BUTTONS
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="buttons">
+        <div class="comp-section-title">02 — KOMPONEN</div>
+        <div class="comp-section-heading">Buttons</div>
+        <div class="comp-section-sub">Tombol aksi dalam berbagai varian, ukuran, dan kondisi.</div>
+        <div class="comp-divider"></div>
+
+        <!-- Variants -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div class="card-title">Variants</div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap gap-12">
+              <button class="btn btn-primary btn-md">
+                <i class="fas fa-check"></i>
+                <span class="btn-label">Primary</span>
+              </button>
+              <button class="btn btn-secondary btn-md">
+                <span class="btn-label">Secondary</span>
+              </button>
+              <button class="btn btn-outline btn-md">
+                <span class="btn-label">Outline</span>
+              </button>
+              <button class="btn btn-ghost btn-md">
+                <span class="btn-label">Ghost</span>
+              </button>
+              <button class="btn btn-danger btn-md">
+                <i class="fas fa-trash"></i>
+                <span class="btn-label">Danger</span>
+              </button>
+              <button class="btn btn-success btn-md">
+                <i class="fas fa-circle-check"></i>
+                <span class="btn-label">Success</span>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sizes -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div class="card-title">Sizes</div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap items-center gap-12">
+              <button class="btn btn-primary btn-xs">XSmall</button>
+              <button class="btn btn-primary btn-sm">Small</button>
+              <button class="btn btn-primary btn-md">Medium</button>
+              <button class="btn btn-primary btn-lg">Large</button>
+              <button class="btn btn-primary btn-xl">XLarge</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- States & icon -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div class="card-title">States &amp; Icon Buttons</div>
+          </div>
+          <div class="card-body">
+            <div class="flex flex-wrap items-center gap-12">
+              <!-- Disabled -->
+              <button class="btn btn-primary btn-md" disabled>
+                <span class="btn-label">Disabled</span>
+              </button>
+              <!-- Loading -->
+              <button class="btn btn-primary btn-md loading" id="btnLoading">
+                <div class="btn-spinner"></div>
+                <span class="btn-label">Loading…</span>
+              </button>
+              <!-- Icon only -->
+              <button class="btn btn-primary btn-icon btn-md" data-tip="Edit">
+                <i class="fas fa-pen"></i>
+              </button>
+              <button class="btn btn-outline btn-icon btn-md" data-tip="Download">
+                <i class="fas fa-download"></i>
+              </button>
+              <button class="btn btn-danger btn-icon btn-md" data-tip="Hapus">
+                <i class="fas fa-trash"></i>
+              </button>
+              <button class="btn btn-ghost btn-icon btn-md" data-tip="Filter">
+                <i class="fas fa-filter"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full width -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Full Width</div>
+          </div>
+          <div class="card-body" style="max-width:400px; display:flex; flex-direction:column; gap:10px;">
+            <button class="btn btn-primary btn-md btn-block">
+              <i class="fas fa-paper-plane"></i>
+              <span class="btn-label">Submit Artikel</span>
+            </button>
+            <button class="btn btn-outline btn-md btn-block">
+              <span class="btn-label">Simpan Draft</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           3. CARDS
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="cards">
+        <div class="comp-section-title">03 — KOMPONEN</div>
+        <div class="comp-section-heading">Cards</div>
+        <div class="comp-section-sub">Berbagai varian card untuk menyajikan informasi secara terstruktur.</div>
+        <div class="comp-divider"></div>
+
+        <!-- Basic cards -->
+        <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:20px;" class="mb-20">
+
+          <!-- Default -->
+          <div class="card">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Default Card</div>
+                <div class="card-subtitle">Sub-judul card</div>
+              </div>
+              <span class="badge badge-blue">Baru</span>
+            </div>
+            <div class="card-body">
+              <p style="font-size:.85rem; color:var(--ink-3); line-height:1.7;">
+                Ini adalah card standar dengan header, body, dan footer. Digunakan untuk menampilkan informasi umum dalam dashboard.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-primary btn-sm"><span class="btn-label">Lihat Detail</span></button>
+              <button class="btn btn-ghost btn-sm"><span class="btn-label">Tutup</span></button>
+            </div>
+          </div>
+
+          <!-- Stripe accent -->
+          <div class="card card-stripe">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Stripe Card</div>
+                <div class="card-subtitle">Dengan garis aksen atas</div>
+              </div>
+            </div>
+            <div class="card-body">
+              <p style="font-size:.85rem; color:var(--ink-3); line-height:1.7;">
+                Card dengan stripe biru di bagian atas sebagai pembeda visual. Cocok untuk menonjolkan konten penting.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-outline btn-sm"><span class="btn-label">Selengkapnya</span></button>
+            </div>
+          </div>
+
+          <!-- Glow hover -->
+          <div class="card card-glow">
+            <div class="card-header">
+              <div>
+                <div class="card-title">Glow on Hover</div>
+                <div class="card-subtitle">Hover untuk melihat efek</div>
+              </div>
+              <i class="fas fa-star" style="color:var(--amber); font-size:.9rem;"></i>
+            </div>
+            <div class="card-body">
+              <p style="font-size:.85rem; color:var(--ink-3); line-height:1.7;">
+                Card ini memiliki efek glow biru saat di-hover. Memberikan kesan interaktif yang premium.
+              </p>
+            </div>
+            <div class="card-footer">
+              <button class="btn btn-success btn-sm"><span class="btn-label">Approve</span></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Status cards -->
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;" class="mb-20">
+          <div class="card card-success">
+            <div class="card-body">
+              <div class="flex items-center gap-12">
+                <div style="width:40px;height:40px;background:var(--green-bg);border:1px solid var(--green-border);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--green);font-size:1.1rem;">
+                  <i class="fas fa-circle-check"></i>
+                </div>
+                <div>
+                  <div style="font-size:.95rem;font-weight:700;color:var(--green);">Artikel Diterima</div>
+                  <div style="font-size:.78rem;color:var(--ink-3);">Proses review selesai — siap dipublikasikan.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card card-danger">
+            <div class="card-body">
+              <div class="flex items-center gap-12">
+                <div style="width:40px;height:40px;background:var(--red-bg);border:1px solid var(--red-border);border-radius:var(--r-sm);display:flex;align-items:center;justify-content:center;color:var(--red);font-size:1.1rem;">
+                  <i class="fas fa-circle-xmark"></i>
+                </div>
+                <div>
+                  <div style="font-size:.95rem;font-weight:700;color:var(--red);">Artikel Ditolak</div>
+                  <div style="font-size:.78rem;color:var(--ink-3);">Tidak memenuhi standar editorial. Revisi diperlukan.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature cards -->
+        <div style="display:grid; grid-template-columns: repeat(4,1fr); gap:20px;">
+          <div class="card-feature">
+            <div class="card-feature-icon"><i class="fas fa-microscope"></i></div>
+            <div class="card-feature-title">ANTHOR Journal</div>
+            <p class="card-feature-desc">Riset sains dan teknologi terapan multidisiplin.</p>
+          </div>
+          <div class="card-feature">
+            <div class="card-feature-icon"><i class="fas fa-globe-asia"></i></div>
+            <div class="card-feature-title">Pesona Indonesia</div>
+            <p class="card-feature-desc">Ilmu sosial, budaya, dan humaniora Nusantara.</p>
+          </div>
+          <div class="card-feature">
+            <div class="card-feature-icon"><i class="fas fa-hands-holding-heart"></i></div>
+            <div class="card-feature-title">Jurnal Dedikasi</div>
+            <p class="card-feature-desc">Pengabdian masyarakat dan inovasi sosial.</p>
+          </div>
+          <div class="card-feature">
+            <div class="card-feature-icon"><i class="fas fa-leaf"></i></div>
+            <div class="card-feature-title">Indo Green</div>
+            <p class="card-feature-desc">Lingkungan hidup dan energi terbarukan.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           4. FORMS
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="forms">
+        <div class="comp-section-title">04 — KOMPONEN</div>
+        <div class="comp-section-heading">Forms</div>
+        <div class="comp-section-sub">Input, select, textarea, checkbox, radio, toggle, dan validasi.</div>
+        <div class="comp-divider"></div>
+
+        <!-- Submission form example -->
+        <div class="card mb-20">
+          <div class="card-header">
+            <div>
+              <div class="card-title">Contoh Form Submission Artikel</div>
+              <div class="card-subtitle">Semua state input — normal, focus, error, success</div>
+            </div>
+          </div>
+          <div class="card-body">
+
+            <!-- Alert -->
+            <div class="form-alert alert-info mb-16">
+              <i class="fas fa-circle-info"></i>
+              <span>Pastikan semua field terisi dengan benar sebelum mengirim.</span>
+            </div>
+
+            <div class="form-grid">
+
+              <!-- Judul -->
+              <div class="field form-full">
+                <label class="field-label" for="f_title">Judul Artikel <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-heading input-icon"></i>
+                  <input type="text" id="f_title" class="field-input" placeholder="Masukkan judul artikel..." value="Penerapan AI dalam Pendidikan Indonesia">
+                </div>
+              </div>
+
+              <!-- Penulis -->
+              <div class="field">
+                <label class="field-label" for="f_author">Nama Penulis <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-user input-icon"></i>
+                  <input type="text" id="f_author" class="field-input" placeholder="Nama lengkap penulis...">
+                </div>
+                <span class="field-error-msg"><i class="fas fa-circle-exclamation"></i> Nama penulis wajib diisi.</span>
+              </div>
+
+              <!-- Email -->
+              <div class="field">
+                <label class="field-label" for="f_email">Email <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-envelope input-icon"></i>
+                  <input type="email" id="f_email" class="field-input success" placeholder="email@institusi.ac.id" value="budi@ui.ac.id">
+                </div>
+              </div>
+
+              <!-- Jurnal -->
+              <div class="field">
+                <label class="field-label" for="f_journal">Pilih Jurnal <span class="req">*</span></label>
+                <select id="f_journal" class="field-select">
+                  <option value="">— Pilih jurnal —</option>
+                  <option value="anthor" selected>ANTHOR Journal</option>
+                  <option value="pesona">Pesona Indonesia</option>
+                  <option value="dedikasi">Jurnal Dedikasi</option>
+                  <option value="green">Indo Green Journal</option>
+                </select>
+              </div>
+
+              <!-- Kata kunci -->
+              <div class="field">
+                <label class="field-label" for="f_keywords">Kata Kunci</label>
+                <div class="input-wrap">
+                  <i class="fas fa-tags input-icon"></i>
+                  <input type="text" id="f_keywords" class="field-input" placeholder="Pisahkan dengan koma...">
+                </div>
+                <span class="field-hint">Contoh: kecerdasan buatan, pendidikan, Indonesia</span>
+              </div>
+
+              <!-- File -->
+              <div class="field">
+                <label class="field-label" for="f_file">Upload Manuskrip <span class="req">*</span></label>
+                <div class="input-wrap">
+                  <i class="fas fa-paperclip input-icon"></i>
+                  <input type="text" id="f_file" class="field-input error" placeholder="Belum ada file dipilih" readonly>
+                  <i class="fas fa-folder-open input-icon-right" style="color:var(--blue-bright);"></i>
+                </div>
+                <span class="field-error-msg"><i class="fas fa-circle-exclamation"></i> File manuskrip wajib dilampirkan (.pdf, .docx).</span>
+              </div>
+
+              <!-- Abstrak -->
+              <div class="field form-full">
+                <label class="field-label" for="f_abstract">Abstrak <span class="req">*</span></label>
+                <textarea id="f_abstract" class="field-textarea" placeholder="Tulis abstrak artikel di sini (maks. 250 kata)..."></textarea>
+              </div>
+
+              <!-- Checkboxes & Toggles -->
+              <div class="field">
+                <label class="field-label">Opsi Publikasi</label>
+                <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+                  <label class="check-label">
+                    <input type="checkbox" class="check-input" checked>
+                    Open Access
+                  </label>
+                  <label class="check-label">
+                    <input type="checkbox" class="check-input">
+                    Fast Track Review
+                  </label>
+                  <label class="check-label">
+                    <input type="checkbox" class="check-input">
+                    Sertakan Data Pendukung
+                  </label>
+                </div>
+              </div>
+
+              <!-- Radio & Toggle -->
+              <div class="field">
+                <label class="field-label">Kategori Artikel</label>
+                <div style="display:flex;flex-direction:column;gap:10px;margin-top:4px;">
+                  <label class="check-label">
+                    <input type="radio" name="cat" class="check-input radio-input" checked>
+                    Artikel Penelitian
+                  </label>
+                  <label class="check-label">
+                    <input type="radio" name="cat" class="check-input radio-input">
+                    Tinjauan Literatur
+                  </label>
+                  <label class="check-label">
+                    <input type="radio" name="cat" class="check-input radio-input">
+                    Studi Kasus
+                  </label>
+                </div>
+                <div class="divider"></div>
+                <label class="toggle-label">
+                  <input type="checkbox" class="toggle-input" id="tgl1" checked>
+                  <div class="toggle-track"></div>
+                  Izinkan notifikasi email
+                </label>
+                <div style="margin-top:10px;">
+                  <label class="toggle-label">
+                    <input type="checkbox" class="toggle-input" id="tgl2">
+                    <div class="toggle-track"></div>
+                    Simpan sebagai draft
+                  </label>
+                </div>
+              </div>
+
+              <!-- Range -->
+              <div class="field form-full">
+                <label class="field-label">Prioritas Review <span style="color:var(--blue-bright);margin-left:auto;font-weight:400;" id="rangeVal">60%</span></label>
+                <input type="range" class="field-range" min="0" max="100" value="60" id="rangeSlider">
+              </div>
+
+            </div><!-- end form-grid -->
+
+            <div class="divider-text">Konfirmasi &amp; Kirim</div>
+
+            <!-- Alert variants -->
+            <div style="display:flex;flex-direction:column;gap:10px;margin-bottom:20px;">
+              <div class="form-alert alert-success">
+                <i class="fas fa-circle-check"></i>
+                <span>Draft berhasil disimpan pada 22 Apr 2026, 14:30 WIB.</span>
+              </div>
+              <div class="form-alert alert-warning">
+                <i class="fas fa-triangle-exclamation"></i>
+                <span>Manuskrip belum dilampirkan. Lampirkan file sebelum submit.</span>
+              </div>
+            </div>
+
+            <div style="display:flex;gap:12px;flex-wrap:wrap;">
+              <button class="btn btn-primary btn-md" id="btnSubmit">
+                <i class="fas fa-paper-plane"></i>
+                <div class="btn-spinner"></div>
+                <span class="btn-label">Submit Artikel</span>
+              </button>
+              <button class="btn btn-ghost btn-md">
+                <span class="btn-label">Simpan Draft</span>
+              </button>
+              <button class="btn btn-danger btn-md">
+                <i class="fas fa-xmark"></i>
+                <span class="btn-label">Batalkan</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           5. PROFILE
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="profile">
+        <div class="comp-section-title">05 — KOMPONEN</div>
+        <div class="comp-section-heading">Profile Cards</div>
+        <div class="comp-section-sub">Profil pengguna dalam berbagai format — card lengkap, compact, dan list item.</div>
+        <div class="comp-divider"></div>
+
+        <div style="display:grid; grid-template-columns: repeat(3,1fr); gap:24px;" class="mb-20">
+
+          <!-- Full profile card -->
+          <div class="profile-card">
+            <div class="profile-cover">
+              <div class="profile-cover-pattern"></div>
+            </div>
+            <div class="profile-avatar-wrap">
+              <div class="profile-avatar-status">
+                <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=1d4ed8&color=fff&size=128&bold=true"
+                     class="profile-avatar profile-avatar-lg" alt="Budi Santoso">
+              </div>
+              <span class="badge badge-green badge-dot">Online</span>
+            </div>
+            <div class="profile-body">
+              <div class="profile-name">Budi Santoso, M.Sc.</div>
+              <div class="profile-role">Penulis Senior</div>
+              <p class="profile-bio">Peneliti bidang kecerdasan buatan dan pembelajaran mesin. Aktif berkontribusi di ANTHOR Journal sejak 2022.</p>
+
+              <div class="profile-meta">
+                <div class="profile-meta-item"><i class="fas fa-envelope"></i> budi@ui.ac.id</div>
+                <div class="profile-meta-item"><i class="fas fa-map-marker-alt"></i> Jakarta, Indonesia</div>
+                <div class="profile-meta-item"><i class="fas fa-university"></i> Universitas Indonesia</div>
+              </div>
+
+              <div class="profile-stats">
+                <div class="profile-stat">
+                  <span class="profile-stat-num">14</span>
+                  <span class="profile-stat-lbl">Artikel</span>
+                </div>
+                <div class="profile-stat">
+                  <span class="profile-stat-num">230</span>
+                  <span class="profile-stat-lbl">Sitasi</span>
+                </div>
+                <div class="profile-stat">
+                  <span class="profile-stat-num">8</span>
+                  <span class="profile-stat-lbl">H-Index</span>
+                </div>
+              </div>
+
+              <div class="profile-skills mb-16">
+                <span class="badge badge-blue badge-sm">Machine Learning</span>
+                <span class="badge badge-sky badge-sm">NLP</span>
+                <span class="badge badge-violet badge-sm">Computer Vision</span>
+                <span class="badge badge-outline badge-sm">Python</span>
+              </div>
+
+              <div style="display:flex;gap:8px;">
+                <button class="btn btn-primary btn-sm btn-block"><i class="fas fa-user-plus"></i><span class="btn-label">Follow</span></button>
+                <button class="btn btn-ghost btn-icon btn-sm" data-tip="Pesan"><i class="fas fa-envelope"></i></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Compact card -->
+          <div class="profile-card">
+            <div class="profile-cover" style="height:60px; background:linear-gradient(135deg,#065f46,#059669,#34d399);"></div>
+            <div class="profile-avatar-wrap">
+              <img src="https://ui-avatars.com/api/?name=Siti+Aminah&background=065f46&color=fff&size=128&bold=true"
+                   class="profile-avatar profile-avatar-lg" alt="Siti Aminah">
+              <span class="badge badge-amber">Editor</span>
+            </div>
+            <div class="profile-body">
+              <div class="profile-name">Dr. Siti Aminah</div>
+              <div class="profile-role" style="color:var(--green);">Editor in Chief</div>
+              <p class="profile-bio">Spesialis ilmu sosial dan humaniora. Memimpin redaksi Jurnal Pesona Indonesia.</p>
+              <div class="profile-stats">
+                <div class="profile-stat">
+                  <span class="profile-stat-num">32</span>
+                  <span class="profile-stat-lbl">Artikel</span>
+                </div>
+                <div class="profile-stat">
+                  <span class="profile-stat-num">511</span>
+                  <span class="profile-stat-lbl">Sitasi</span>
+                </div>
+                <div class="profile-stat">
+                  <span class="profile-stat-num">12</span>
+                  <span class="profile-stat-lbl">H-Index</span>
+                </div>
+              </div>
+              <div style="display:flex;gap:8px;">
+                <button class="btn btn-outline btn-sm btn-block"><span class="btn-label">Lihat Profil</span></button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Minimal card -->
+          <div class="card" style="padding:28px 24px; text-align:center;">
+            <img src="https://ui-avatars.com/api/?name=Andi+Wijaya&background=164e63&color=38bdf8&size=128&bold=true"
+                 style="width:72px;height:72px;border-radius:var(--r-md);object-fit:cover;margin:0 auto 16px;border:2px solid var(--border-2);" alt="Andi">
+            <div style="font-size:1rem;font-weight:700;margin-bottom:3px;">Andi Wijaya, S.T.</div>
+            <div style="font-size:.7rem;font-weight:700;color:var(--sky);letter-spacing:1.2px;text-transform:uppercase;margin-bottom:12px;">Reviewer</div>
+            <div class="profile-skills" style="justify-content:center;margin-bottom:18px;">
+              <span class="badge badge-sky badge-sm">Green Energy</span>
+              <span class="badge badge-green badge-sm">Environment</span>
+            </div>
+            <div class="avatar-group" style="justify-content:center;margin-bottom:18px;">
+              <img src="https://ui-avatars.com/api/?name=A&background=1d4ed8&color=fff&size=64" class="av" alt="a">
+              <img src="https://ui-avatars.com/api/?name=B&background=065f46&color=fff&size=64" class="av" alt="b">
+              <img src="https://ui-avatars.com/api/?name=C&background=78350f&color=fff&size=64" class="av" alt="c">
+              <div class="av">+4</div>
+            </div>
+            <button class="btn btn-ghost btn-sm btn-block"><span class="btn-label">Lihat Reviewer</span></button>
+          </div>
+
+        </div>
+
+        <!-- Profile list (row) -->
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">Profile List — Daftar Reviewer</div>
+            <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i><span class="btn-label">Tambah</span></button>
+          </div>
+          <div class="card-body" style="display:flex;flex-direction:column;gap:10px;">
+
+            <div class="profile-row">
+              <img src="https://ui-avatars.com/api/?name=Budi+Santoso&background=1d4ed8&color=fff&size=88&bold=true" class="profile-row-avatar" alt="">
+              <div class="profile-row-info">
+                <div class="profile-row-name">Budi Santoso, M.Sc.</div>
+                <div class="profile-row-sub">ANTHOR Journal · budi@ui.ac.id</div>
+              </div>
+              <div class="profile-row-action" style="display:flex;align-items:center;gap:8px;">
+                <span class="badge badge-green badge-dot">Online</span>
+                <button class="btn btn-ghost btn-icon btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://ui-avatars.com/api/?name=Siti+Aminah&background=065f46&color=fff&size=88&bold=true" class="profile-row-avatar" alt="">
+              <div class="profile-row-info">
+                <div class="profile-row-name">Dr. Siti Aminah</div>
+                <div class="profile-row-sub">Pesona Indonesia · siti@ugm.ac.id</div>
+              </div>
+              <div class="profile-row-action" style="display:flex;align-items:center;gap:8px;">
+                <span class="badge badge-amber badge-dot">Away</span>
+                <button class="btn btn-ghost btn-icon btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://ui-avatars.com/api/?name=Andi+Wijaya&background=164e63&color=38bdf8&size=88&bold=true" class="profile-row-avatar" alt="">
+              <div class="profile-row-info">
+                <div class="profile-row-name">Andi Wijaya, S.T.</div>
+                <div class="profile-row-sub">Indo Green Journal · andi@itb.ac.id</div>
+              </div>
+              <div class="profile-row-action" style="display:flex;align-items:center;gap:8px;">
+                <span class="badge badge-red badge-dot">Offline</span>
+                <button class="btn btn-ghost btn-icon btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+            </div>
+
+            <div class="profile-row">
+              <img src="https://ui-avatars.com/api/?name=Rina+Kurniawati&background=4c1d95&color=a78bfa&size=88&bold=true" class="profile-row-avatar" alt="">
+              <div class="profile-row-info">
+                <div class="profile-row-name">Rina Kurniawati, M.Hum.</div>
+                <div class="profile-row-sub">Jurnal Dedikasi · rina@unair.ac.id</div>
+              </div>
+              <div class="profile-row-action" style="display:flex;align-items:center;gap:8px;">
+                <span class="badge badge-green badge-dot">Online</span>
+                <button class="btn btn-ghost btn-icon btn-sm"><i class="fas fa-ellipsis-v"></i></button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <!-- ══════════════════════════════════════
+           6. PROGRESS & MISC
+           ══════════════════════════════════════ -->
+      <div class="comp-section" id="misc">
+        <div class="comp-section-title">06 — KOMPONEN</div>
+        <div class="comp-section-heading">Progress &amp; Utilities</div>
+        <div class="comp-section-sub">Progress bar, avatar group, empty state, dan tooltip.</div>
+        <div class="comp-divider"></div>
+
+        <div style="display:grid; grid-template-columns: 1fr 1fr; gap:20px;">
+          <div class="card">
+            <div class="card-header"><div class="card-title">Progress Bars</div></div>
+            <div class="card-body" style="display:flex;flex-direction:column;gap:16px;">
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-2);margin-bottom:8px;">
+                  <span>Total Artikel Terbit</span><span style="color:var(--blue-bright);">78%</span>
+                </div>
+                <div class="progress"><div class="progress-bar" style="width:78%;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-2);margin-bottom:8px;">
+                  <span>Review Selesai</span><span style="color:var(--green);">55%</span>
+                </div>
+                <div class="progress"><div class="progress-bar bar-green" style="width:55%;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-2);margin-bottom:8px;">
+                  <span>Pending Submission</span><span style="color:var(--amber);">32%</span>
+                </div>
+                <div class="progress"><div class="progress-bar bar-amber" style="width:32%;"></div></div>
+              </div>
+              <div>
+                <div style="display:flex;justify-content:space-between;font-size:.78rem;color:var(--ink-2);margin-bottom:8px;">
+                  <span>Artikel Ditolak</span><span style="color:var(--red);">12%</span>
+                </div>
+                <div class="progress"><div class="progress-bar bar-red" style="width:12%;"></div></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty state + avatars + tooltips -->
+          <div class="card">
+            <div class="card-header"><div class="card-title">Utilities</div></div>
+            <div class="card-body" style="display:flex;flex-direction:column;gap:24px;">
+
+              <!-- Avatar group -->
+              <div>
+                <div style="font-size:.72rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px;">Avatar Group</div>
+                <div class="avatar-group">
+                  <img src="https://ui-avatars.com/api/?name=A&background=1d4ed8&color=fff&size=64" class="av" alt="">
+                  <img src="https://ui-avatars.com/api/?name=B&background=065f46&color=fff&size=64" class="av" alt="">
+                  <img src="https://ui-avatars.com/api/?name=C&background=78350f&color=fbbf24&size=64" class="av" alt="">
+                  <img src="https://ui-avatars.com/api/?name=D&background=4c1d95&color=a78bfa&size=64" class="av" alt="">
+                  <div class="av">+8</div>
+                </div>
+              </div>
+
+              <!-- Tooltips -->
+              <div>
+                <div style="font-size:.72rem;color:var(--ink-3);text-transform:uppercase;letter-spacing:1px;font-weight:700;margin-bottom:10px;">Tooltips (hover)</div>
+                <div class="flex gap-12 flex-wrap">
+                  <button class="btn btn-primary btn-sm" data-tip="Simpan perubahan">
+                    <i class="fas fa-floppy-disk"></i><span class="btn-label">Simpan</span>
+                  </button>
+                  <button class="btn btn-ghost btn-icon btn-md" data-tip="Lihat detail lengkap">
+                    <i class="fas fa-eye"></i>
+                  </button>
+                  <button class="btn btn-danger btn-icon btn-md" data-tip="Hapus permanen">
+                    <i class="fas fa-trash"></i>
+                  </button>
+                  <span class="badge badge-amber badge-dot" data-tip="Menunggu konfirmasi admin" style="cursor:default;">Pending</span>
+                </div>
+              </div>
+
+              <!-- Empty state mini -->
+              <div class="empty-state" style="padding:28px 16px; background:var(--bg-3); border-radius:var(--r-lg); border:1px dashed var(--border-2);">
+                <div class="empty-state-icon"><i class="fas fa-inbox"></i></div>
+                <div class="empty-state-title">Belum ada submission</div>
+                <p class="empty-state-desc">Submission baru akan muncul di sini setelah dikirim oleh penulis.</p>
+                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i><span class="btn-label">Buat Manual</span></button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end content-inner -->
+  </div><!-- end content-area -->
+</div><!-- end dashboard-layout -->
+
+<script>
+  /* Range slider live value */
+  const slider = document.getElementById('rangeSlider');
+  const rangeVal = document.getElementById('rangeVal');
+  if (slider) {
+    slider.addEventListener('input', () => {
+      rangeVal.textContent = slider.value + '%';
+    });
+  }
+
+  /* Submit button — demo loading */
+  const btnSubmit = document.getElementById('btnSubmit');
+  if (btnSubmit) {
+    btnSubmit.addEventListener('click', function() {
+      this.classList.add('loading');
+      this.disabled = true;
+      setTimeout(() => {
+        this.classList.remove('loading');
+        this.disabled = false;
+        // show success alert
+        const alertEl = document.querySelector('.form-alert.alert-success');
+        if (alertEl) {
+          alertEl.style.display = 'flex';
+          alertEl.querySelector('span').textContent = '✓ Artikel berhasil disubmit! Proses review akan dimulai dalam 1×24 jam.';
+        }
+      }, 2200);
+    });
+  }
+</script>
+
+</body>
+</html>

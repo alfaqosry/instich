@@ -1,0 +1,3 @@
+{
+  "/(admin)/tentang/page": "app/(admin)/tentang/page.js"
+}

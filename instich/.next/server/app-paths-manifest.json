@@ -1,0 +1,21 @@
+{
+  "/(admin)/daftarjurnal/page": "app/(admin)/daftarjurnal/page.js",
+  "/(admin)/dashboard/page": "app/(admin)/dashboard/page.js",
+  "/(admin)/kontak/page": "app/(admin)/kontak/page.js",
+  "/(admin)/setting/page": "app/(admin)/setting/page.js",
+  "/(admin)/tentang/page": "app/(admin)/tentang/page.js",
+  "/(admin)/tim/page": "app/(admin)/tim/page.js",
+  "/(auth)/login/page": "app/(auth)/login/page.js",
+  "/(public)/page": "app/(public)/page.js",
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/api/auth/[...nextauth]/route": "app/api/auth/[...nextauth]/route.js",
+  "/api/daftarjurnal/[id]/route": "app/api/daftarjurnal/[id]/route.js",
+  "/api/daftarjurnal/route": "app/api/daftarjurnal/route.js",
+  "/api/kontak/route": "app/api/kontak/route.js",
+  "/api/site-config/route": "app/api/site-config/route.js",
+  "/api/tentang/route": "app/api/tentang/route.js",
+  "/api/tim/[id]/route": "app/api/tim/[id]/route.js",
+  "/api/tim/route": "app/api/tim/route.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js"
+}

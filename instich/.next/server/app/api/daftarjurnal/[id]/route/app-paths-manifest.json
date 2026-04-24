@@ -1,0 +1,3 @@
+{
+  "/api/daftarjurnal/[id]/route": "app/api/daftarjurnal/[id]/route.js"
+}

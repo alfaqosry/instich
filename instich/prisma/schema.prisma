@@ -1,0 +1,68 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Get a free hosted Postgres database in seconds: `npx create-db`
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model Journal {
+  id          Int      @id @default(autoincrement())
+  name        String   // Contoh: ANTHOR Journal
+  description String   @db.Text // Deskripsi singkat jurnal
+  icon        String   // Class FontAwesome, misal: "fa-microscope"
+  link        String   // URL menuju OJS (https://...)
+  order       Int      @default(0) // Untuk mengatur urutan tampilan
+  createdAt   DateTime @default(now())
+}
+
+model SiteConfig {
+  id          Int      @id @default(1)
+  heroTitle   String   @default("Scientific Portals")
+  heroSubtitle String  @default("Akses jurnal ilmiah resmi TPI")
+  deskripsi    String  @default("-")
+}
+
+model User {
+  id            String    @id @default(cuid())
+  name          String?
+  username      String    @unique 
+  email         String    @unique
+  password      String?
+  image         String?
+  jabatan       String?
+  deskripsi     String?
+  createdAt     DateTime  @default(now())
+}
+
+model Team {
+  id        Int      @id @default(autoincrement())
+  name      String
+  role      String   // Misal: Editor in Chief, Reviewer
+  image     String   // URL foto atau path file
+  order     Int      @default(0)
+  createdAt DateTime @default(now())
+}
+
+// Tambahkan juga untuk konten About agar bisa diedit
+model AboutConfig {
+  id          Int    @id @default(1)
+  content     String @db.Text
+  history     String @db.Text
+}
+
+model ContactConfig {
+  id        Int     @id @default(1)
+  address   String  @default("Jl. Contoh No.123, Pekanbaru, Riau")
+  phone     String  @default("+62 812-3456-7890")
+  email     String  @default("info@domain.com")
+  website   String  @default("https://example.com")
+  mapsEmbed String  @default("") // optional iframe Google Maps
+  createdAt DateTime @default(now())
+}

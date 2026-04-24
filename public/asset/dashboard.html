@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TPI Dashboard — Admin Jurnal</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- ================================================
+         SIDEBAR
+         ================================================ -->
+    <aside class="sidebar">
+      <!-- Brand -->
+      <div class="sidebar-brand">
+        <div class="sidebar-brand-logo">T</div>
+        <div>
+          <div class="sidebar-brand-name">TPI Panel</div>
+          <div class="sidebar-brand-sub">Admin Console</div>
+        </div>
+      </div>
+
+      <!-- Nav -->
+      <nav class="sidebar-nav">
+        <div class="sidebar-nav-label">Menu</div>
+
+        <a href="#" class="sidebar-link active">
+          <i class="fas fa-gauge"></i> Dashboard
+        </a>
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-file-invoice"></i> Submissions
+        </a>
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-book"></i> My Journals
+        </a>
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-users"></i> Reviewers
+        </a>
+
+        <div class="sidebar-nav-label" style="margin-top:8px;">Sistem</div>
+
+        <a href="#" class="sidebar-link">
+          <i class="fas fa-gear"></i> Settings
+        </a>
+      </nav>
+
+      <!-- Footer -->
+      <div class="sidebar-footer">
+        <a href="index.html" class="sidebar-back">
+          <i class="fas fa-arrow-left"></i> Kembali ke Situs
+        </a>
+      </div>
+    </aside>
+
+    <!-- ================================================
+         MAIN CONTENT
+         ================================================ -->
+    <div class="content-area">
+
+      <!-- Top bar -->
+      <div class="content-topbar">
+        <div>
+          <div class="page-title">Overview</div>
+          <div class="page-sub">Selamat datang kembali, Admin Jurnal.</div>
+        </div>
+        <div class="topbar-actions">
+          <div class="topbar-notif" title="Notifikasi">
+            <i class="far fa-bell"></i>
+          </div>
+          <img
+            src="https://ui-avatars.com/api/?name=Admin+TPI&background=1a56db&color=ffffff&size=72"
+            class="topbar-avatar"
+            alt="Admin Avatar"
+          >
+        </div>
+      </div>
+
+      <!-- Inner content -->
+      <div class="content-inner">
+
+        <!-- ---- STAT CARDS ---- -->
+        <div class="stats-grid">
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-newspaper"></i>
+            </div>
+            <div class="stat-card-label">Total Artikel</div>
+            <div class="stat-card-value">1,284</div>
+            <div class="stat-card-trend up">
+              <i class="fas fa-arrow-up" style="font-size:0.65rem;"></i> +12% bulan ini
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="stat-card-label">Pending Reviews</div>
+            <div class="stat-card-value">42</div>
+            <div class="stat-card-trend warn">
+              <i class="fas fa-triangle-exclamation" style="font-size:0.65rem;"></i> Butuh tindakan
+            </div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-card-icon">
+              <i class="fas fa-download"></i>
+            </div>
+            <div class="stat-card-label">Total Unduhan</div>
+            <div class="stat-card-value">8.5k</div>
+            <div class="stat-card-trend up">
+              <i class="fas fa-arrow-up" style="font-size:0.65rem;"></i> +5% dari kemarin
+            </div>
+          </div>
+
+          <div class="stat-card highlight">
+            <div class="stat-card-icon">
+              <i class="fas fa-circle-check"></i>
+            </div>
+            <div class="stat-card-label">System Status</div>
+            <div class="stat-card-value">Active</div>
+            <div class="stat-card-trend">
+              <i class="fas fa-bolt" style="font-size:0.65rem;"></i> Optimized
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ---- RECENT SUBMISSIONS TABLE ---- -->
+        <div class="table-card">
+          <div class="table-card-header">
+            <div class="table-card-title">Recent Submissions</div>
+            <a href="#" class="btn-ghost-tpi">Lihat Semua</a>
+          </div>
+
+          <div style="overflow-x:auto;">
+            <table class="table-tpi">
+              <thead>
+                <tr>
+                  <th>Judul Artikel</th>
+                  <th>Penulis</th>
+                  <th>Jurnal</th>
+                  <th>Status</th>
+                  <th>Aksi</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="td-article-title">Penerapan AI dalam Pendidikan Indonesia</div>
+                  </td>
+                  <td class="td-author">Budi Santoso</td>
+                  <td class="td-journal">ANTHOR Journal</td>
+                  <td><span class="badge-tpi review">In Review</span></td>
+                  <td><button class="btn-ghost-tpi">Detail</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-article-title">Analisis Ekonomi Digital Pasca Pandemi</div>
+                  </td>
+                  <td class="td-author">Siti Aminah</td>
+                  <td class="td-journal">Pesona Indonesia</td>
+                  <td><span class="badge-tpi published">Published</span></td>
+                  <td><button class="btn-ghost-tpi">Detail</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-article-title">Studi Kasus Green Energy di Riau</div>
+                  </td>
+                  <td class="td-author">Andi Wijaya</td>
+                  <td class="td-journal">Indo Green Journal</td>
+                  <td><span class="badge-tpi pending">Pending</span></td>
+                  <td><button class="btn-ghost-tpi">Detail</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-article-title">Transformasi Digital UMKM Sumatera</div>
+                  </td>
+                  <td class="td-author">Rina Kurniawati</td>
+                  <td class="td-journal">Jurnal Dedikasi</td>
+                  <td><span class="badge-tpi review">In Review</span></td>
+                  <td><button class="btn-ghost-tpi">Detail</button></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="td-article-title">Riset Mangrove Pesisir Riau 2025</div>
+                  </td>
+                  <td class="td-author">Dedi Prasetyo</td>
+                  <td class="td-journal">Indo Green Journal</td>
+                  <td><span class="badge-tpi published">Published</span></td>
+                  <td><button class="btn-ghost-tpi">Detail</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <!-- end table-card -->
+
+      </div>
+      <!-- end content-inner -->
+
+    </div>
+    <!-- end content-area -->
+
+  </div>
+  <!-- end dashboard-layout -->
+
+</body>
+</html>

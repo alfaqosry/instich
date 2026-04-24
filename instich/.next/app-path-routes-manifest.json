@@ -1,0 +1,21 @@
+{
+  "/(admin)/daftarjurnal/page": "/daftarjurnal",
+  "/(admin)/dashboard/page": "/dashboard",
+  "/(admin)/kontak/page": "/kontak",
+  "/(admin)/setting/page": "/setting",
+  "/(admin)/tentang/page": "/tentang",
+  "/(admin)/tim/page": "/tim",
+  "/(auth)/login/page": "/login",
+  "/(public)/page": "/",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/api/auth/[...nextauth]/route": "/api/auth/[...nextauth]",
+  "/api/daftarjurnal/[id]/route": "/api/daftarjurnal/[id]",
+  "/api/daftarjurnal/route": "/api/daftarjurnal",
+  "/api/kontak/route": "/api/kontak",
+  "/api/site-config/route": "/api/site-config",
+  "/api/tentang/route": "/api/tentang",
+  "/api/tim/[id]/route": "/api/tim/[id]",
+  "/api/tim/route": "/api/tim",
+  "/favicon.ico/route": "/favicon.ico"
+}

@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masuk — TPI Jurnal</title>
+  <meta name="description" content="Masuk ke panel admin TPI Jurnal untuk mengelola submission dan publikasi ilmiah.">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="asset/login.css">
+</head>
+<body>
+
+<div class="login-page">
+
+  <div class="panel-left">
+    <div class="left-dots"></div>
+
+    <!-- Brand -->
+    <div class="left-brand">
+      <div class="left-logo">T</div>
+      <div class="left-brand-text">
+        <strong>TPI Jurnal</strong>
+        <small>Digital Repository</small>
+      </div>
+    </div>
+
+    <!-- Main content -->
+    <div class="left-content">
+      <h2 class="left-tagline">
+        Portal Admin<br>
+        Jurnal <em>Ilmiah Indonesia.</em>
+      </h2>
+      <p class="left-desc">
+        Kelola submission, pantau proses review, dan publikasikan karya ilmiah terbaik bangsa — semuanya dari satu panel terpadu.
+      </p>
+
+      <div class="left-features">
+        <div class="feature-pill">
+          <i class="fas fa-shield-halved"></i>
+          <span>Akses terproteksi</span>
+        </div>
+        <div class="feature-pill">
+          <i class="fas fa-file-invoice"></i>
+          <span>Manajemen submission</span>
+        </div>
+        <div class="feature-pill">
+          <i class="fas fa-users"></i>
+          <span>Kelola reviewer</span>
+        </div>
+        <div class="feature-pill">
+          <i class="fas fa-chart-line"></i>
+          <span>Statistik real-time</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="left-stats">
+      <div>
+        <span class="left-stat-num">12+</span>
+        <span class="left-stat-lbl">Jurnal</span>
+      </div>
+      <div>
+        <span class="left-stat-num">500+</span>
+        <span class="left-stat-lbl">Artikel</span>
+      </div>
+      <div>
+        <span class="left-stat-num">42</span>
+        <span class="left-stat-lbl">Reviewer</span>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="panel-right">
+    <div class="form-card">
+
+      <!-- Back to site -->
+      <a href="index.html" class="back-link">
+        <i class="fas fa-arrow-left"></i> Kembali ke Situs
+      </a>
+
+      <!-- Header -->
+      <div class="form-header">
+        <div class="form-eyebrow">
+          <i class="fas fa-lock"></i> Admin Panel
+        </div>
+        <h1 class="form-title">Selamat Datang</h1>
+        <p class="form-subtitle">
+          Masukkan kredensial Anda untuk mengakses panel manajemen jurnal.
+        </p>
+      </div>
+
+      <!-- Error alert -->
+      <div class="alert-error" id="alertError" role="alert">
+        <i class="fas fa-circle-exclamation"></i>
+        <span id="alertMsg">Email atau kata sandi tidak sesuai.</span>
+      </div>
+
+      <!-- Form -->
+      <form class="form-body" id="loginForm" novalidate>
+
+        <!-- Email -->
+        <div class="field" id="fieldEmail">
+          <label class="field-label" for="email">
+            Alamat Email <span>*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="field-input"
+              placeholder="admin@tpi.or.id"
+              autocomplete="email"
+              inputmode="email"
+              required
+            >
+            <i class="fas fa-envelope input-icon"></i>
+          </div>
+          <div class="field-error" id="emailError">
+            <i class="fas fa-circle-exclamation"></i>
+            <span>Format email tidak valid.</span>
+          </div>
+        </div>
+
+        <!-- Password -->
+        <div class="field" id="fieldPassword">
+          <label class="field-label" for="password">
+            Kata Sandi <span>*</span>
+          </label>
+          <div class="input-wrap">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="field-input"
+              placeholder="Masukkan kata sandi"
+              autocomplete="current-password"
+              required
+            >
+            <i class="fas fa-lock input-icon"></i>
+            <button
+              type="button"
+              class="pw-toggle"
+              id="pwToggle"
+              aria-label="Tampilkan kata sandi"
+            >
+              <i class="fas fa-eye" id="pwIcon"></i>
+            </button>
+          </div>
+          <div class="field-error" id="passwordError">
+            <i class="fas fa-circle-exclamation"></i>
+            <span>Kata sandi minimal 6 karakter.</span>
+          </div>
+        </div>
+
+        <!-- Options row -->
+        <div class="form-options">
+          <label class="check-label">
+            <input type="checkbox" id="remember" name="remember">
+            Ingat saya
+          </label>
+          <a href="#" class="forgot-link">Lupa kata sandi?</a>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn-login" id="btnLogin">
+          <div class="btn-spinner" id="btnSpinner"></div>
+          <span class="btn-text">
+            <i class="fas fa-arrow-right-to-bracket"></i> Masuk ke Panel
+          </span>
+        </button>
+
+        <!-- Divider -->
+        <div class="form-divider">
+          <span>atau</span>
+        </div>
+
+        <!-- Register link -->
+        <p class="form-footer">
+          Belum punya akun?
+          <a href="#">Hubungi administrator</a>
+        </p>
+
+      </form>
+    </div>
+  </div>
+
+</div>
+
+<!-- ============================================================
+     JAVASCRIPT
+     ============================================================ -->
+<script>
+  /* --- Password visibility toggle --- */
+  const pwToggle = document.getElementById('pwToggle');
+  const pwInput  = document.getElementById('password');
+  const pwIcon   = document.getElementById('pwIcon');
+
+  pwToggle.addEventListener('click', () => {
+    const isText = pwInput.type === 'text';
+    pwInput.type = isText ? 'password' : 'text';
+    pwIcon.className = isText ? 'fas fa-eye' : 'fas fa-eye-slash';
+    pwToggle.setAttribute('aria-label', isText ? 'Tampilkan kata sandi' : 'Sembunyikan kata sandi');
+  });
+
+  /* --- Helpers --- */
+  function showFieldError(fieldId, errorId) {
+    document.getElementById(fieldId).querySelector('.field-input').classList.add('error');
+    document.getElementById(errorId).classList.add('show');
+  }
+  function clearFieldError(fieldId, errorId) {
+    document.getElementById(fieldId).querySelector('.field-input').classList.remove('error');
+    document.getElementById(errorId).classList.remove('show');
+  }
+  function showAlert(msg) {
+    const el = document.getElementById('alertError');
+    document.getElementById('alertMsg').textContent = msg;
+    el.classList.add('show');
+  }
+  function hideAlert() {
+    document.getElementById('alertError').classList.remove('show');
+  }
+
+  /* --- Live validation --- */
+  document.getElementById('email').addEventListener('input', function () {
+    if (this.value) clearFieldError('fieldEmail', 'emailError');
+  });
+  document.getElementById('password').addEventListener('input', function () {
+    if (this.value.length >= 6) clearFieldError('fieldPassword', 'passwordError');
+  });
+
+  /* --- Form submit --- */
+  document.getElementById('loginForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    hideAlert();
+
+    const email    = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+    const emailRe  = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    let valid = true;
+
+    // Validate email
+    if (!email || !emailRe.test(email)) {
+      showFieldError('fieldEmail', 'emailError');
+      document.getElementById('emailError').querySelector('span').textContent =
+        !email ? 'Email tidak boleh kosong.' : 'Format email tidak valid.';
+      valid = false;
+    } else {
+      clearFieldError('fieldEmail', 'emailError');
+    }
+
+    // Validate password
+    if (!password || password.length < 6) {
+      showFieldError('fieldPassword', 'passwordError');
+      document.getElementById('passwordError').querySelector('span').textContent =
+        !password ? 'Kata sandi tidak boleh kosong.' : 'Kata sandi minimal 6 karakter.';
+      valid = false;
+    } else {
+      clearFieldError('fieldPassword', 'passwordError');
+    }
+
+    if (!valid) return;
+
+    // Show loading state
+    const btn = document.getElementById('btnLogin');
+    btn.classList.add('loading');
+    btn.disabled = true;
+
+    // Simulate auth (replace with real API call)
+    setTimeout(() => {
+      // Demo credentials
+      if (email === 'admin@tpi.or.id' && password === 'admin123') {
+        // Success → redirect to dashboard
+        window.location.href = 'dashboard.html';
+      } else {
+        // Failure
+        btn.classList.remove('loading');
+        btn.disabled = false;
+        showAlert('Email atau kata sandi tidak sesuai. Coba lagi.');
+        document.getElementById('password').value = '';
+        document.getElementById('password').focus();
+
+        // Shake the form card
+        const card = document.querySelector('.form-card');
+        card.style.animation = 'none';
+        card.offsetHeight; // reflow
+        card.style.animation = 'shake 0.4s ease';
+      }
+    }, 1600);
+  });
+</script>
+
+<style>
+  /* Shake animation for failed login */
+  @keyframes shake {
+    0%,100% { transform: translateX(0); }
+    20%      { transform: translateX(-8px); }
+    40%      { transform: translateX(8px); }
+    60%      { transform: translateX(-5px); }
+    80%      { transform: translateX(5px); }
+  }
+</style>
+
+</body>
+</html>

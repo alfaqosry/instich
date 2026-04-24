@@ -1,0 +1,166 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "onMatchHeaders": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/api/auth/[...nextauth]",
+      "regex": "^/api/auth/(.+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPnextauth": "nxtPnextauth"
+      },
+      "namedRegex": "^/api/auth/(?<nxtPnextauth>.+?)(?:/)?$"
+    },
+    {
+      "page": "/api/daftarjurnal/[id]",
+      "regex": "^/api/daftarjurnal/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/daftarjurnal/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/api/tim/[id]",
+      "regex": "^/api/tim/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/api/tim/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/api/daftarjurnal",
+      "regex": "^/api/daftarjurnal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/daftarjurnal(?:/)?$"
+    },
+    {
+      "page": "/api/kontak",
+      "regex": "^/api/kontak(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/kontak(?:/)?$"
+    },
+    {
+      "page": "/api/site-config",
+      "regex": "^/api/site\\-config(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/site\\-config(?:/)?$"
+    },
+    {
+      "page": "/api/tentang",
+      "regex": "^/api/tentang(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/tentang(?:/)?$"
+    },
+    {
+      "page": "/api/tim",
+      "regex": "^/api/tim(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/api/tim(?:/)?$"
+    },
+    {
+      "page": "/daftarjurnal",
+      "regex": "^/daftarjurnal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/daftarjurnal(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/favicon.ico",
+      "regex": "^/favicon\\.ico(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/favicon\\.ico(?:/)?$"
+    },
+    {
+      "page": "/kontak",
+      "regex": "^/kontak(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/kontak(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/setting",
+      "regex": "^/setting(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/setting(?:/)?$"
+    },
+    {
+      "page": "/tentang",
+      "regex": "^/tentang(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tentang(?:/)?$"
+    },
+    {
+      "page": "/tim",
+      "regex": "^/tim(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/tim(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}
